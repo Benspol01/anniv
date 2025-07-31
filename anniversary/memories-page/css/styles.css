@@ -45,8 +45,8 @@ body {
     height: 520px;
     width: 320px;
     margin: 10px auto;
-    min-height: 520px;
-    max-height: 520px;
+    min-height: 550px;
+    max-height: 550px;
     min-width: 320px;
     max-width: 320px;
     box-sizing: border-box;
