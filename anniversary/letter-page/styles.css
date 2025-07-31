@@ -1,0 +1,253 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 117, 117, 1) 48%, rgba(237, 221, 83, 1) 100%);   
+  height: 150vh;
+  margin: 0;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+  z-index: -1; /* Place the overlay behind the content */
+}
+.envelope {
+  position: relative;
+  cursor: pointer;
+  transform: scale(2); /* Make everything larger */
+}
+.back {
+  position: relative;
+  width: 350px;
+  height: 280px;
+  background: #c0392b;
+}
+.front {
+  position: absolute;
+  border-right: 180px solid #e74c3c;
+  border-top: 140px solid transparent;
+  border-bottom: 140px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 170px;
+  z-index: 3;
+}
+.front::before {
+  content: "";
+  position: absolute;
+  border-left: 180px solid #e74c3c;
+  border-top: 140px solid transparent;
+  border-bottom: 140px solid transparent;
+  height: 0;
+  width: 0;
+  top: -140px;
+  left: -170px;
+}
+.front::after {
+  content: "";
+  position: absolute;
+  border-bottom: 145px solid #b03a2e;
+  border-left: 175px solid transparent;
+  border-right: 175px solid transparent;
+  height: 0;
+  width: 0;
+  top: -5px;
+  left: -170px;
+}
+.top {
+  position: absolute;
+  border-top: 145px solid #b03a2e;
+  border-left: 175px solid transparent;
+  border-right: 175px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  transform-origin: top;
+  transition: 0.4s;
+}
+.envelope:hover .top {
+  transform: rotateX(160deg);
+}
+.letter {
+  background-color: BLACK;
+  width: 330px;
+  height: 260px;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+.envelope:hover .letter {
+  transform: translateY(-200px); /* Move higher when hovered */
+  z-index: 2;
+}
+
+.text {
+  text-align: justify;
+  font-size: 8px;
+  font-family: roboto, sans-serif;
+  padding: 10px;
+  font-weight: normal;
+  color: WHITE;
+  position: relative;
+  top: -20px;
+  bottom: 20px;
+}
+
+.heart {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 100px;
+  left: -150px;
+  transform: rotate(-45deg);
+  box-shadow: -5px 10px 90px red;
+  animation: untoldcoding 0.6s linear infinite;
+}
+.heart1 {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  transform: rotate(-45deg);
+  box-shadow: -5px 10px 90px red;
+  animation: untoldcoding1 0.6s linear infinite;
+}
+@keyframes untoldcoding {
+  0% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.08);
+  }
+}
+@keyframes untoldcoding1 {
+  0% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.08);
+  }
+}
+.heart:before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  top: -50px;
+  border-radius: 50px;
+}
+.heart:after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  right: -50px;
+  border-radius: 50px;
+}
+.heart1:before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  top: -50px;
+  border-radius: 50px;
+}
+.heart1:after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  right: -50px;
+  border-radius: 50px;
+}
+.envelope p#natoy {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: bold;
+  font-size: 15px;
+  align-items: center;
+}
+.envelope #q1 a {
+  display: inline-block;
+  color: #6247aa;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 10; /* Make sure the link appears above other elements */
+  position: relative;
+}
+.stamp {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background: url("IMG_9555.jpg") no-repeat center center/cover;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* Floating hearts animation */
+@keyframes floating-hearts {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.heart-image {
+  position: absolute;
+  font-size: 30px;
+  animation: floating-hearts 2s infinite;
+}
+
+/* Additional scattered hearts outside the envelope */
+.scattered-heart {
+  font-size: 30px;
+  animation: floating-hearts 4s ease-in-out infinite;
+}
+.nav-item .nav-link {
+    color: #333 !important;
+    text-decoration: none;
+    margin-right: 30px;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+}
+.nav-item .nav-link:hover {
+    color: #485aff !important;
+  
+}
+.navbar-brand{  
+    padding-left: 30px;
+    font-family: "Roboto",sans-serif ;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 3rem; /* Increased from 2rem to 3rem */
+    color: #333;
+}

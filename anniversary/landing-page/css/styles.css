@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Roboto:ital,wdth,wght@0,80.1,100..900;1,80.1,100..900&display=swap');
+body {
+    font-family: "Roboto", sans-serif;
+    background: #ffffff;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 117, 117, 1) 48%, rgba(237, 221, 83, 1) 100%);    
+    margin: 0;
+    padding: 0;
+ 
+}
+
+.nav-item .nav-link {
+    color: #333 !important;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+}
+.nav-item{
+    margin: 0 20px;
+}
+.nav-item .nav-link:hover {
+    color: #485aff !important;
+  
+}
+.navbar-brand{  
+    padding-left: 30px;
+    font-family: "Roboto",sans-serif ;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 3rem; /* Increased from 2rem to 3rem */
+    color: #333;
+}
+.text-center{
+    color: white
+}
+.col-md-8 img{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.col-md-4 p{
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    
+}
+span.heart {
+    display: inline-block;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    transform: rotate(-45deg);
+    position: relative;
+    animation: heartbeat 1s infinite;
+    vertical-align: middle;
+}
+
+span.heart::before,
+span.heart::after {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+span.heart::before {
+    top: -10px;
+    left: 0px;
+}
+
+span.heart::after {
+    left: 10px;
+    top: 0px;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+    25% {
+        transform: scale(1.25) rotate(-45deg);
+    }
+    45% {
+        transform: scale(1.5) rotate(-45deg);
+    }
+}
+.footer {
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
